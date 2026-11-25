@@ -5,11 +5,21 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-This is a small college project where we were required to modify sample code to produce a VGA graphic using a Basys3 FPGA board.
+This is a small college project where we were required to modify sample code to produce a VGA graphic using a Basys3 FPGA board as a VGA controller.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
+Project used a Basys3 dev board with a Artix-7 xc7a35tcpg236-1 FPGA.
+The templates provided include a VGASync module, which controls the scanning of the display. It sets parameters for the display dimensions and the horizontal and vertical counting limits. It also generates and assigns the row and column output values, which represent the current pixel position on the display. Also it controls the hsync, vsync and vid_on variables which control synchronisation and blanking time of the output.  
+
+There are also two sample modules provided. The one my project is based on is the VGAColourStripes module. This module uses combinational logic to assign values to the red, green and blue net variable. It also contains sequential logic which, at each positive clock edge, assigns the next red, green and blue values to their respective registers.
+
+The VGA top module then instantiates the VGASync module, the ColourStripes module and the clock wizard(configured to 25MHz in the Vivado software). It connects these modules together and outputs the red, green and blue colour signals, along with the horizontal and vertical synchronisation signals (HSYNC and VSYNC). Also the binary vid_on signal fron the VGASync module determines whether assigned colour values are displayed or a value of 000(black) is displayed. 
+<img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/f23a0743-77a0-4bdd-a546-bb3445d50124" />
+
+
+Basically, the VGA draws an image one pixel at a time, scanning from left to right and top to bottom. The HSYNC signal indicates the end of each horizontal line, while the VSYNC signal indicates the end of a complete frame. The vid_on signal controls the blanking intervals, allowing the monitor to synchronise its output with the appropriate lines and frames.
+Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph
 
 <img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
 ### **Template Code**
@@ -35,7 +45,7 @@ Output of sample code
 
 <img width="678" height="494" alt="image" src="https://github.com/user-attachments/assets/2e8210b5-8bac-48d3-9ad3-bebdf59ba22e" />
 
-Added if statements to add a horizontal striped circle. These were placed at the end of the combinational logic to overwrite to early vertical stripes values for those pixels. Added Pythagorean theorem to get a distance from centre for my radius. 
+Added if statements to add a horizontal striped circle. These were placed at the end of the combinational logic to overwrite to early vertical stripes values for those pixels. Added Pythagorean theorem to get a radius squared value to determine circle size. 
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/d4caa7e3-1b97-479a-9c25-7e37496ad9e2" />
 
 
