@@ -5,7 +5,7 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-This is a small college project where we were required to modify sample code to produce a VGA image using a Basys3 FPGA board.
+This is a small college project where we were required to modify sample code to produce an image through using a Basys3 FPGA board.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
