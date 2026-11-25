@@ -27,8 +27,8 @@ Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 My VGA design idea was to replicate the old analogue Tv Test Cards. Initially, I considered a simplified version inspired by original cards but after discussion with my lecturer I realised a high fidelity replication was practically achievable with the use of AI tools. For my research I used google image search to find an reference image I liked https://i0.wp.com/rewind.thetvroom.com/wp-rwnd/wp-content/uploads/2022/12/2rn-test-card-20181027-002-01.png?w=1850&ssl=1
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
 ### **Code Adaptation**
-
 Sample code
+
 <img width="567" height="600" alt="image" src="https://github.com/user-attachments/assets/f64888d4-af1f-44a8-b5c0-723f9ba945d9" />
 
 Output of sample code
