@@ -51,7 +51,7 @@ Briefly show how you changed the template code to display a different image. Dem
 Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low to signal the end of one horizontal line in VGA standard. The colour values are FFF which outputs as white. This show the row signal increment at column 800( ie horizontal limit).     
 <img width="934" height="230" alt="image" src="https://github.com/user-attachments/assets/ba85e56b-4860-4b77-b615-5df065a74a33" />
 
-You can see here the columns increment at the positive edge of every clock cycle.
+You can see here the columns increment every clock cycle.
 
 
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
