@@ -5,7 +5,7 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-This is a small college project where we were required to modify sample code to produce an image through using a Basys3 FPGA board.
+This is a small college project where we were required to modify sample code to produce a VGA graphic using a Basys3 FPGA board.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
@@ -35,7 +35,7 @@ Output of sample code
 
 <img width="678" height="494" alt="image" src="https://github.com/user-attachments/assets/2e8210b5-8bac-48d3-9ad3-bebdf59ba22e" />
 
-Added if statements to add a horizontal striped circle. Added Pythagorean theorem to get a distance from centre for my radius. 
+Added if statements to add a horizontal striped circle. These were placed at the end of the combinational logic to overwrite to early vertical stripes values for those pixels. Added Pythagorean theorem to get a distance from centre for my radius. 
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/d4caa7e3-1b97-479a-9c25-7e37496ad9e2" />
 
 
@@ -48,7 +48,7 @@ Briefly show how you changed the template code to display a different image. Dem
 ### **Simulation**
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/a4239d30-7a62-48fb-9dd6-9fa66c25af2f" />
 
-Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low to signal the end of one horizontal line in VGA standard. The colour values are FFF which outputs as white. This show the row signal increment at column 800( ie horizontal limit).     
+Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low to signal the end of one horizontal line in VGA standard. The colour values are FFF which outputs as white. This show the row signal increment(000 -> 001) at column 800( ie horizontal limit).     
 <img width="934" height="230" alt="image" src="https://github.com/user-attachments/assets/ba85e56b-4860-4b77-b615-5df065a74a33" />
 
 You can see here the columns increment every clock cycle.
