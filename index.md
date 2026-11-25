@@ -46,6 +46,7 @@ Briefly show how you changed the template code to display a different image. Dem
 ### **Simulation**
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/a4239d30-7a62-48fb-9dd6-9fa66c25af2f" />
 
+Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low to signal the end of one horizontal line in VGA standard.   
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 ### **Synthesis**
 Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
