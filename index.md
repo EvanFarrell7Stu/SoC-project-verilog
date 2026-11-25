@@ -52,7 +52,7 @@ Describe the synthesis & implementation outputs for your design, are there any d
 ### **Demonstration**
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/ddbea7f1-c12b-4d64-b49a-22c2b7c79cfe" />
 
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
+This is the finished product. It is displayed in 4:3 aspect ratio to have the correct representation of a 640x480 image.
 
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
