@@ -22,7 +22,7 @@ Describe the synthesis and implementation processes. Consider including 1/2 usef
 Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 
 ## **My VGA Design Edit**
-My VGA design idea was to replicate the old analogue Tv Test Cards. Initially, I considered a simplified version inspired by original cards but after discussion with my lecturer I realised a high fidelity replication was practically achievable with the use of AI tools. For my research I used google image search to find an reference image I liked [Test Card image]https://i0.wp.com/rewind.thetvroom.com/wp-rwnd/wp-content/uploads/2022/12/2rn-test-card-20181027-002-01.png?w=1850&ssl=1
+My VGA design idea was to replicate the old analogue Tv Test Cards. Initially, I considered a simplified version inspired by original cards but after discussion with my lecturer I realised a high fidelity replication was practically achievable with the use of AI tools. For my research I used google image search to find an reference image I liked [Test Card image](https://i0.wp.com/rewind.thetvroom.com/wp-rwnd/wp-content/uploads/2022/12/2rn-test-card-20181027-002-01.png?w=1850&ssl=1)
 
 ### **Code Adaptation**
 Sample code
