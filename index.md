@@ -13,16 +13,11 @@ This is a small college project where we were required to modify sample code to 
 Project used a Basys3 dev board with a Artix-7 xc7a35tcpg236-1 FPGA.
 
 The design flow is as follows: 
--Simulation. Use simulation to see if code outputs as expected.
--RTL Analysis
--Synthesis
--Implementation
--Program
-
-requirements:
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph
-
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
+- Simulation-Use simulation of Verilog code to see if code outputs as expected.
+- RTL Analysis-Analyses code and produces a schematic of the modules
+- Synthesis-Produces a logic diagram with registers, logic gates, etc.
+- Implementation-Plots how the program will be implemented on the physical board
+- Program-Generate bitstream and program FPGA
 
 
 The templates provided include a VGASync module, which controls the scanning of the display. It sets parameters for the display dimensions and the horizontal and vertical counting limits. It also generates and assigns the row and column output values, which represent the current pixel position on the display. Also it controls the hsync, vsync and vid_on variables which control synchronisation and blanking time of the output.  
