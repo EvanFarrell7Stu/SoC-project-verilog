@@ -28,6 +28,7 @@ My VGA design idea was to replicate the old analogue Tv Test Cards. Initially, I
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
 ### **Code Adaptation**
 <img width="567" height="600" alt="image" src="https://github.com/user-attachments/assets/f64888d4-af1f-44a8-b5c0-723f9ba945d9" />
+
 Output of sample code
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/9d326b37-2c38-42bb-b863-63c2ab5946b4" />
 <img width="678" height="494" alt="image" src="https://github.com/user-attachments/assets/2e8210b5-8bac-48d3-9ad3-bebdf59ba22e" />
