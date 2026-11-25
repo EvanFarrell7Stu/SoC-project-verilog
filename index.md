@@ -34,6 +34,7 @@ Sample code
 Output of sample code
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/9d326b37-2c38-42bb-b863-63c2ab5946b4" />
 <img width="678" height="494" alt="image" src="https://github.com/user-attachments/assets/2e8210b5-8bac-48d3-9ad3-bebdf59ba22e" />
+
 Added if statements to overwrite vertical stripes with a horizontal striped circle.
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/d4caa7e3-1b97-479a-9c25-7e37496ad9e2" />
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/325fc196-2287-42e3-9907-77933a92cff7" />
