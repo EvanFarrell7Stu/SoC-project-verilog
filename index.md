@@ -5,9 +5,7 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-Add a short welcome message or introduction here. Aim to get the viewer interested in what follows! Guideline: 1 or 2 sentences. 
-
-I am adding a test sentence here at 13:24 on 03/12/24.
+This is a small college project where we were required to a VGA image using a Basys3 FPGA board.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
@@ -70,6 +68,4 @@ A bullet list can be rendered as follows:
 - algorithms
 - iterators
 
-Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
 
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSrcs.png">
