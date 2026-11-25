@@ -22,7 +22,7 @@ There are also two sample modules provided. The one my project is based on is th
 The VGA top module then instantiates the VGASync module, the ColourStripes module and the clock wizard(configured to 25MHz in the Vivado software). It connects these modules together and outputs the red, green and blue colour signals, along with the horizontal and vertical synchronisation signals (HSYNC and VSYNC). Also the binary vid_on signal fron the VGASync module determines whether assigned colour values are displayed or a value of 000(black) is displayed. 
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/f23a0743-77a0-4bdd-a546-bb3445d50124" />
 
-Fig.(vid_on=0 meaning nothing displayed as we are outside the display range(0-639) on the first row(000). The column number is 0x2D4(724) which puts it beyond the display+front porch range of 0-655. This means hsync is brought low for one pulse to signal to monitor the row has ended for syncing)
+Here we see vid_on=0 meaning nothing displayed as we are outside the display range(0-639) on the first row(000). The column number is 0x2D4(724) which puts it beyond the display+front porch range of 0-655. This means hsync is brought low for one pulse to signal to monitor the row has ended for syncing.
 
 
 Basically, the VGA draws an image one pixel at a time, scanning from left to right and top to bottom. The HSYNC signal indicates the end of each horizontal line, while the VSYNC signal indicates the end of a complete frame. The vid_on signal controls the blanking intervals, allowing the monitor to synchronise its output with the appropriate lines and frames.
