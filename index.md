@@ -27,7 +27,13 @@ Here we see vid_on=0 meaning nothing displayed as we are outside the display ran
 
 Basically, the VGA draws an image one pixel at a time, scanning from left to right and top to bottom. The HSYNC signal indicates the end of each horizontal line, while the VSYNC signal indicates the end of a complete frame. The vid_on signal controls the blanking intervals, allowing the monitor to synchronise its output with the appropriate lines and frames.
 ### **Simulation**
-Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+The simulation process uses a testbench file to instantiate modules and provide a clock signal all in the application. It displays a simulated waveform allowing you to test the program without having to program the physical FPGA. This allows you to check the values of counters, signals and your registers at different times(image displays values at 7.235 us) and see if they work as expected.
+
+<img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/f23a0743-77a0-4bdd-a546-bb3445d50124" />
+
+The simulation waveform here shows the column counter incrementing on each clock cycle. And then after 800 clock cycles it resets to zero and row counter increments to the next row. It demonstrates that the hsync goes low and the vid_on goes low when they are outside the display range+front porch and the display range respectively. 
+
+The waveform also displays the register values, with different colours used to distinguish the signals and make their values easier to follow. This makes it possible to examine **how the signals change over time** and identify any unexpected behaviour.
 ### **Synthesis**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
 
@@ -59,10 +65,10 @@ Briefly show how you changed the template code to display a different image. Dem
 ### **Simulation**
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/a4239d30-7a62-48fb-9dd6-9fa66c25af2f" />
 
-Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low to signal the end of one horizontal line in VGA standard. The colour values are FFF which outputs as white. This show the row signal increment(000 -> 001) at column 800( ie horizontal limit).     
+Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low for a period to signal the end of one horizontal line for the monitor to synchronie with the next line. The colour values are RGB FFF which outputs as white. This show the row signal increment(000 -> 001) at column 800( ie horizontal limit). 
 <img width="934" height="230" alt="image" src="https://github.com/user-attachments/assets/ba85e56b-4860-4b77-b615-5df065a74a33" />
 
-You can see here the columns increment every clock cycle.
+You can see here the columns increment every clock cycle. It is hard to see here but it increments on the positive clock edge.
 
 
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
