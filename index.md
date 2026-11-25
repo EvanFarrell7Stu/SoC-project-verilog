@@ -39,7 +39,8 @@ Output of sample code
 
 Added if statements to overwrite vertical stripes with a horizontal striped circle.
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/d4caa7e3-1b97-479a-9c25-7e37496ad9e2" />
-<img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/325fc196-2287-42e3-9907-77933a92cff7" />
+<img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/ddbea7f1-c12b-4d64-b49a-22c2b7c79cfe" />
+
 
 
 
