@@ -48,7 +48,7 @@ Briefly show how you changed the template code to display a different image. Dem
 ### **Simulation**
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/a4239d30-7a62-48fb-9dd6-9fa66c25af2f" />
 
-Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low to signal the end of one horizontal line in VGA standard. The colour values are FFF which outputs as white. This show the row signal increment at column 800.     
+Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low to signal the end of one horizontal line in VGA standard. The colour values are FFF which outputs as white. This show the row signal increment at column 800( ie horizontal limit).     
 <img width="934" height="230" alt="image" src="https://github.com/user-attachments/assets/ba85e56b-4860-4b77-b615-5df065a74a33" />
 
 
