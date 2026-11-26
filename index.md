@@ -5,7 +5,7 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-This is a small college project where we were required to modify sample code to produce a VGA graphic using a Basys3 FPGA board as a VGA controller.   jokj
+This is a small college project where we were required to modify sample code to produce a VGA graphic using a Basys3 FPGA board as a VGA controller.   
 
 ## **Template VGA Design**
 ### **Project Set-Up**
@@ -22,7 +22,7 @@ The design flow is as follows:
 
 The templates provided include a VGASync module, which controls the scanning of the display. It sets parameters for the display dimensions and the horizontal and vertical counting limits. It also generates and assigns the row and column output values, which represent the current pixel position on the display. Also it controls the hsync, vsync and vid_on variables which control synchronisation and blanking time of the output.  
 
-There are also two sample modules provided. The one my project is based on is the VGAColourStripes module. This module uses combinational logic to assign values to the red, green and blue net variable. It also contains sequential logic which, at each positive clock edge, assigns the next red, green and blue values to their respective registers.
+There are also two sample modules provided. The one my project is based on is the VGAColourStripes module. This module uses combinational logic to assign values to the red, green and blue _next variables. It also contains sequential logic which, at each positive clock edge, assigns the next red, green and blue values to their respective registers.
 
 The VGA top module then instantiates the VGASync module, the ColourStripes module and the clock wizard(configured to 25MHz in the Vivado software). It connects these modules together and outputs the red, green and blue colour signals, along with the horizontal and vertical synchronisation signals (HSYNC and VSYNC). Also the binary vid_on signal fron the VGASync module determines whether assigned colour values are displayed or a value of 000(black) is displayed. 
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/f23a0743-77a0-4bdd-a546-bb3445d50124" />
@@ -73,55 +73,27 @@ This shows the conditional logic  if((col % 40 == 0) || (row % 40 == 0)) to assi
 
 <img width="467" height="202" alt="image" src="https://github.com/user-attachments/assets/b22cc211-a2f6-4874-bb8a-624ae07be86b" />
 
-This code assigns yellow if row is in range 148-222, col is 95-169 and the distance from centre squared is less than the circle_rad parameter value(50625). This overwrites the assigned value from earlier if statements like the background and gridlines in that area. This yellow block at the circumference of the circle is the product.
+This code assigns yellow if row is in range 148-222, col is 95-169 and the distance from centre squared is less than or equal to the circle_rad parameter value(50625). This condition checks if its within a radius of 225(sqrt of 50625). This overwrites the assigned value from earlier if statements like the background and gridlines in that area. This yellow block at the circumference of the circle is the product.
 
 <img width="102" height="101" alt="image" src="https://github.com/user-attachments/assets/73fcce0e-68cb-41de-93ad-3564969a2696" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
 ### **Simulation**
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/a4239d30-7a62-48fb-9dd6-9fa66c25af2f" />
 
-Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low for a period to signal the end of one horizontal line for the monitor to synchronie with the next line. The colour values are RGB FFF which outputs as white. This show the row signal increment(000 -> 001) at column 800( ie horizontal limit). 
+Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low for a period to signal the end of one horizontal line for the monitor to synchronie with the next line. The colour values are RGB FFF which outputs as white. This show the row counter increment(000 -> 001) at column 800( ie horizontal limit). 
 <img width="934" height="230" alt="image" src="https://github.com/user-attachments/assets/ba85e56b-4860-4b77-b615-5df065a74a33" />
 
 You can see here the columns increment every clock cycle. It is hard to see here but it increments on the positive clock edge.
 
 
-Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 ### **Synthesis**
-Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
+Don't have any screenshots but I know it would have used more logic gates as there are far more combinational logic checks in the final code than the original. There were no additional registers.
 ### **Demonstration**
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/ddbea7f1-c12b-4d64-b49a-22c2b7c79cfe" />
 
 This is the finished product. It is displayed in 4:3 aspect ratio to have the correct representation of a 640x480 image.
 
-## **More Markdown Basics**
-This is a paragraph. Add an empty line to start a new paragraph.
 
-Font can be emphasised as *Italic* or **Bold**.
-
-Code can be highlighted by using `backticks`.
-
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-A bullet list can be rendered as follows:
-- vectors
-- algorithms
-- iterators
 
 
