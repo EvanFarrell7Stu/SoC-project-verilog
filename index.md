@@ -66,6 +66,7 @@ The functional relationship of the sequential logic and combinational logic in t
 
 Using an AI tool I generated a series of if statements based off the reference image of the tv test card. Here is a sample
 <img width="572" height="366" alt="image" src="https://github.com/user-attachments/assets/a3e9c627-c8eb-40ea-9670-df49a1624e5b" />
+
 <img width="106" height="65" alt="image" src="https://github.com/user-attachments/assets/b187bb50-fd49-42cc-b9a4-05f2f32c29f6" />
 
 This shows the conditional logic  if((col % 40 == 0) || (row % 40 == 0)) to assign the colour fff(white) if the row or column is a multiple of 40. This produces the white gridlines.
