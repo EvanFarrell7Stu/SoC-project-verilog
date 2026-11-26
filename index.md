@@ -81,8 +81,10 @@ This code assigns yellow if row is in range 148-222, col is 95-169 and the dista
 ### **Simulation**
 <img width="691" height="384" alt="Screenshot 2026-11-16 172520" src="https://github.com/user-attachments/assets/a4239d30-7a62-48fb-9dd6-9fa66c25af2f" />
 
-Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low for a period to signal the end of one horizontal line for the monitor to synchronie with the next line. The colour values are RGB FFF which outputs as white. This show the row counter increment(000 -> 001) at column 800( ie horizontal limit). 
+Here the simulation shows the hsync and vid_on outputs are low at column 0x2d4(724). The hsync goes low for a period to signal the end of one horizontal line for the monitor to synchronie with the next line.This show the row counter increment(000 -> 001) at column 800( ie horizontal limit). 
 <img width="934" height="230" alt="image" src="https://github.com/user-attachments/assets/ba85e56b-4860-4b77-b615-5df065a74a33" />
+
+The colour values are RGB FFF which outputs as white. This is the first horizontal gridline as the row%40==0 condition evaluates as true when row=000. Then when the row counter increments to 001 we get alternating values of fff every 40 clock cycles for the vertical white gridlines and 888 for the default grey background in the colour outputs.
 
 You can see here the columns increment every clock cycle. It is hard to see here but it increments on the positive clock edge.
 
