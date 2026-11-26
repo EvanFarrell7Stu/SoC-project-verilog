@@ -5,7 +5,7 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-This is a small college project where we were required to modify sample code to produce a VGA graphic using a Basys3 FPGA board as a VGA controller.
+This is a small college project where we were required to modify sample code to produce a VGA graphic using a Basys3 FPGA board as a VGA controller.   jokj
 
 ## **Template VGA Design**
 ### **Project Set-Up**
