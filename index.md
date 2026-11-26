@@ -62,6 +62,7 @@ Added if statements to add a horizontal striped circle. These if statements were
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/d4caa7e3-1b97-479a-9c25-7e37496ad9e2" />
 
 I did not change any of the sequential logic from the sample code, only the combinational logic.
+The functional relationship of the sequential logic and combinational logic in this code is the combinational logic assigns values to the red_next, blue_next and green_next registers, then on the positive clock edge the sequential logic block assigns the (colour)_next values to the (colour)_reg registers. Finally, the colour register values are assigned to output wires. 
 
 Using an AI tool I generated a series of if statements based off the reference image of the tv test card. Here is a sample
 <img width="572" height="366" alt="image" src="https://github.com/user-attachments/assets/a3e9c627-c8eb-40ea-9670-df49a1624e5b" />
@@ -71,7 +72,8 @@ This shows the conditional logic  if((col % 40 == 0) || (row % 40 == 0)) to assi
 
 <img width="467" height="202" alt="image" src="https://github.com/user-attachments/assets/b22cc211-a2f6-4874-bb8a-624ae07be86b" />
 
-This code assigns yellow if row is in range 148-222, col is 95-169 and the distance from centre squared is less than the circle_rad parameter value(50625). This overwrites the assigned value from earlier if statements like the background and gridlines in that area.
+This code assigns yellow if row is in range 148-222, col is 95-169 and the distance from centre squared is less than the circle_rad parameter value(50625). This overwrites the assigned value from earlier if statements like the background and gridlines in that area. This yellow block at the circumference of the circle is the product.
+
 <img width="102" height="101" alt="image" src="https://github.com/user-attachments/assets/73fcce0e-68cb-41de-93ad-3564969a2696" />
 
 
