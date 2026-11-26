@@ -61,8 +61,26 @@ Output of sample code
 Added if statements to add a horizontal striped circle. These if statements were placed at the end of the combinational logic to overwrite to early vertical stripes values for those pixels. Added Pythagorean theorem to get a radius squared value to determine circle size. 
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/d4caa7e3-1b97-479a-9c25-7e37496ad9e2" />
 
+I did not change any of the sequential logic from the sample code, only the combinational logic.
+
 Using an AI tool I generated a series of if statements based off the reference image of the tv test card. Here is a sample
 <img width="572" height="366" alt="image" src="https://github.com/user-attachments/assets/a3e9c627-c8eb-40ea-9670-df49a1624e5b" />
+<img width="106" height="65" alt="image" src="https://github.com/user-attachments/assets/b187bb50-fd49-42cc-b9a4-05f2f32c29f6" />
+
+This shows the conditional logic  if((col % 40 == 0) || (row % 40 == 0)) to assign the colour fff(white) if the row or column is a multiple of 40. This produces the white gridlines.
+
+<img width="467" height="202" alt="image" src="https://github.com/user-attachments/assets/b22cc211-a2f6-4874-bb8a-624ae07be86b" />
+
+This code assigns yellow if row is in range 148-222, col is 95-169 and the distance from centre squared is less than the circle_rad parameter value(50625). This overwrites the assigned value from earlier if statements like the background and gridlines in that area.
+<img width="102" height="101" alt="image" src="https://github.com/user-attachments/assets/73fcce0e-68cb-41de-93ad-3564969a2696" />
+
+
+
+
+
+
+
+
 
 
 
