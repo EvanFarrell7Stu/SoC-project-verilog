@@ -16,7 +16,7 @@ The design flow is as follows:
 - Simulation-Use simulation of Verilog code to see if code outputs as expected.
 - RTL Analysis-Analyses code and produces a schematic of the modules
 - Synthesis-Produces a logic diagram with registers, logic gates, etc.
-- Implementation-Plots how the program will be implemented on the physical board
+- Implementation-Plots how the program will be implemented on the physical FPGA
 - Program-Generate bitstream and program FPGA
 
 
@@ -39,8 +39,9 @@ The simulation process uses a testbench file to instantiate modules and provide 
 The simulation waveform here shows the column counter incrementing on each clock cycle. And then after 800 clock cycles it resets to zero and row counter increments to the next row. It demonstrates that the hsync goes low and the vid_on goes low when they are outside the display range+front porch and the display range respectively. 
 
 The waveform also displays the register values, with different colours used to distinguish the signals and make their values easier to follow. This makes it possible to examine **how the signals change over time** and identify any unexpected behaviour.
-### **Synthesis**
-Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+### **Synthesis and Implementation**
+- Synthesis-Takes the Verilog RTL design and converts it into a logic diagram with registers, logic gates, etc.
+- Implementation-Plots how the program will be implemented on the physical FPGA. Allows you to generate a bitstream.
 
 
 ## **My VGA Design Edit**
@@ -57,8 +58,12 @@ Output of sample code
 
 <img width="678" height="494" alt="image" src="https://github.com/user-attachments/assets/2e8210b5-8bac-48d3-9ad3-bebdf59ba22e" />
 
-Added if statements to add a horizontal striped circle. These were placed at the end of the combinational logic to overwrite to early vertical stripes values for those pixels. Added Pythagorean theorem to get a radius squared value to determine circle size. 
+Added if statements to add a horizontal striped circle. These if statements were placed at the end of the combinational logic to overwrite to early vertical stripes values for those pixels. Added Pythagorean theorem to get a radius squared value to determine circle size. 
 <img width="1214" height="914" alt="image" src="https://github.com/user-attachments/assets/d4caa7e3-1b97-479a-9c25-7e37496ad9e2" />
+
+Using an AI tool I generated a series of if statements based off the reference image of the tv test card. Here is a sample
+<img width="572" height="366" alt="image" src="https://github.com/user-attachments/assets/a3e9c627-c8eb-40ea-9670-df49a1624e5b" />
+
 
 
 
